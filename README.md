@@ -28,8 +28,8 @@ A step by step series of examples that tell you how to get a development env run
 
 ## Built With
 
-* [php](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [MySQL](https://maven.apache.org/) - Dependency Management
+* [php](https://www.python.org/) - A high level general purpose programming Language
+* [MySQL](https://www.mysql.com/) - An open-source relational database management system (RDBMS).
 
 ## License
 
