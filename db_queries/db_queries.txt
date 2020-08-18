@@ -1,0 +1,55 @@
+/* Database Queries Used */
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`police_station` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `police_station`;
+
+CREATE TABLE `image_gallery` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `m_ps_contact_details` (
+  `SrNo` int(11) NOT NULL AUTO_INCREMENT,
+  `PS_NAME` varchar(100) DEFAULT NULL,
+  `ADDRESS` varchar(100) DEFAULT NULL,
+  `INCHARGE_OFFICER` varchar(50) DEFAULT NULL,
+  `DESIGNATION` varchar(50) DEFAULT NULL,
+  `CONTACTNO` varchar(20) DEFAULT NULL,
+  `RECORD_STATUS` char(1) DEFAULT NULL,
+  PRIMARY KEY (`SrNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `t_accident_compensation` (
+  `SrNo` int(11) NOT NULL AUTO_INCREMENT,
+  `SDPO` varchar(100) DEFAULT NULL,
+  `PS` varchar(100) DEFAULT NULL,
+  `TITLE` varchar(100) DEFAULT NULL,
+  `DATA` longblob,
+  `DATE` datetime DEFAULT NULL,
+  `RECORD_CREATED_ON` datetime DEFAULT NULL,
+  `RECORD_CREATED_BY` varchar(20) DEFAULT NULL,
+  `RECORD_STATUS` char(1) DEFAULT NULL,
+  `NAME` varchar(255) DEFAULT NULL,
+  `SIZE` int(11) DEFAULT NULL,
+  `DOWNLOADS` int(11) DEFAULT NULL,
+  `FIRNO` varchar(20) DEFAULT NULL,
+  `REMARK` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`SrNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=175 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `t_branch` (
+  `SrNo` int(11) NOT NULL AUTO_INCREMENT,
+  `Branch_Name` varchar(100) DEFAULT NULL,
+  `BranchID` int(11) DEFAULT NULL,
+  `Branch_head_photo` longblob,
+  `Branch_head_name` varchar(100) DEFAULT NULL,
+  `Description` varchar(100) DEFAULT NULL,
+  `Record_created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Record_created_by` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`SrNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
